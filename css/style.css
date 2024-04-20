@@ -16,12 +16,15 @@
 
 h1 {
   font-size: 4rem;
-  font-size: 4vw;
 }
 
 h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h3{
   font-size: 2rem;
-  font-size: 2vw;
   font-weight: 400;
 }
 
@@ -49,7 +52,6 @@ header {
   width: 100%;
   top: 0;
   font-weight: bold;
-
 }
 
 .logo {
@@ -58,24 +60,22 @@ header {
   gap: 5px;
 }
 
-.logo h2 {
+.logo h1 {
   font-size: 25px;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 
 .nav-items {
   display: inline-block;
-  padding: 0.5vw 1vw;
-  font-size: 1vw;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
   border-radius: 5px;
 }
 
 .nav-items:not(:last-child):hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-
 }
 
 .nav-items:last-child {
@@ -92,7 +92,7 @@ header {
   display: none;
 }
 
-.volver-arriba-container{
+.volver-arriba-container {
   position: fixed;
   right: 1.5rem;
   top: 94vh;
@@ -103,13 +103,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 
 .section_bienvenida {
   background: linear-gradient(to right top, rgba(0, 0, 0, 0.54), rgba(0, 0, 0, 0.54)) center center / cover, url(/img/banner-bg.jpg);
   height: calc(100svh - 5rem);
+  height: 95svh;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -132,9 +133,8 @@ header {
   margin-inline: auto;
   display: inline-block;
   width: min-content;
-  padding: 1vw 2vw;
+  padding: 1rem 2rem;
   font-size: 1.5rem;
-  font-size: 1.5vw;
   background-color: var(--color_principal);
   text-decoration: none;
   font-weight: bold;
@@ -145,15 +145,65 @@ header {
   transform: scale(1.05);
 }
 
-/* Multiplico x2 el tamaño de las letras */
+.section_busqueda{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50svh;
+  text-align: center;
+  width: 80%;
+  margin-inline:auto;
+  gap: 2rem;
+}
 
-@media screen and (max-width:850px) {
+.section-busqueda-container{
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-busqueda-container input{
+  width: 50vw;
+  min-width: 200px;
+  height:50px;
+  border-radius: 30px;
+  padding-inline:1rem ;
+  font-size: 1rem;
+  color:black;
+}
+
+.section-busqueda-container input:focus {
+  outline: none; /* Evita que aparezca el contorno de enfoque */
+}
+
+
+.section-busqueda-boton{
+  min-width: 100px;
+  height: 50px;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  background-color: var(--color_principal);
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width:768px) {
+  
   h1 {
-    font-size: 8vw;
+    font-size: 2.5rem;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 1.8rem;
+  }
+
+  h3{
+    font-size: 1.2rem;
   }
 
   header {
@@ -169,11 +219,11 @@ header {
   }
 
   .section-container a {
-    font-size: 3.5vw;
+    font-size: 1.5rem;
   }
 
   .boton-registro {
-    padding: 2vw 4vw;
+    padding: 0.5rem 1rem;
   }
 
 }
