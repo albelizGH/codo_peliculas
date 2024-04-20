@@ -23,7 +23,7 @@ h2 {
   font-weight: 600;
 }
 
-h3{
+h3 {
   font-size: 2rem;
   font-weight: 400;
 }
@@ -145,42 +145,43 @@ header {
   transform: scale(1.05);
 }
 
-.section_busqueda{
+.section_busqueda {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50svh;
+  min-height: 50svh;
   text-align: center;
   width: 80%;
-  margin-inline:auto;
+  margin-inline: auto;
   gap: 2rem;
 }
 
-.section-busqueda-container{
+.section-busqueda-container {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.section-busqueda-container input{
+.section-busqueda-container input {
   width: 50vw;
   min-width: 200px;
-  height:50px;
+  height: 50px;
   border-radius: 30px;
-  padding-inline:1rem ;
+  padding-inline: 1rem;
   font-size: 1rem;
-  color:black;
+  color: black;
 }
 
 .section-busqueda-container input:focus {
-  outline: none; /* Evita que aparezca el contorno de enfoque */
+  outline: none;
+  /* Evita que aparezca el contorno de enfoque */
 }
 
 
-.section-busqueda-boton{
+.section-busqueda-boton {
   min-width: 100px;
   height: 50px;
   padding: 0.5rem 1rem;
@@ -193,7 +194,7 @@ header {
 
 
 @media screen and (max-width:768px) {
-  
+
   h1 {
     font-size: 2.5rem;
   }
@@ -202,7 +203,7 @@ header {
     font-size: 1.8rem;
   }
 
-  h3{
+  h3 {
     font-size: 1.2rem;
   }
 
@@ -224,6 +225,19 @@ header {
 
   .boton-registro {
     padding: 0.5rem 1rem;
+  }
+
+}
+
+
+@media screen and (max-width:380px) {
+
+  .section_bienvenida {
+    min-height: 100svh;
+  }
+
+  .section_busqueda {
+    min-height: 100svh;
   }
 
 }
