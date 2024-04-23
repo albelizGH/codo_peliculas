@@ -18,6 +18,14 @@ body {
   background-color: var(--color_secundario);
 }
 
+::-webkit-scrollbar {
+  height: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9f3647;
+}
+
 hr {
   border: 1px solid #9f3647;
   width: 80%;
@@ -31,7 +39,8 @@ hr {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 60px;
-
+  transition-property: all;
+  transition-duration: 2s;
 }
 
 .titulo {
@@ -46,7 +55,6 @@ hr {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0px 0px 40px 0px;
 }
 
 .peliculaItem {
@@ -93,6 +101,5 @@ hr {
 .flecha {
   position: fixed;
   bottom: 1vh;
-  right: 2vw;
-  display: flex;
+  right: 1vw;
 }
