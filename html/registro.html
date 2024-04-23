@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Peliculas Codo</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../css/registro.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+			crossorigin="anonymous"
+		/>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<header>
+			<a class="logo" href="../index.html">
+				<i class="fa fa-solid fa-film fa-2x"></i>
+				<h1 class="logo-h2">CAC-Movies</h1>
+			</a>
+
+			<nav class="header-nav">
+				<ul>
+					<li class="nav-items"><a href="#">Tendencias</a></li>
+					<li class="nav-items">
+						<a href="../html/registro.html">Registrarse</a>
+					</li>
+					<li class="nav-items"><a href="#">Inicia Sesión</a></li>
+				</ul>
+			</nav>
+			<i id="menu-desplegable" class="fa fa-bars fa-lg"></i>
+		</header>
+
+		<main>
+			<div class="registro-container">
+				<div class="registro-container-interno">
+					<div class="titulo">
+						<h1>Registro</h1>
+					</div>
+					<form action="">
+						<input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+						<input type="text" name="apellido" id="apellido" placeholder="Apellido" required>
+						<input type="email" name="email" id="nombre" placeholder="Email" required>
+						<input type="password" name="contrasenia" id="nombre" placeholder="Contraseña" required>
+						<input type="date" name="fecha" id="fecha" placeholder="dd/mm/aaaa" required>
+						<select name="pais" id="pais" required>
+							<option value="argentina">Argentina</option>
+							<option value="bolivia">Bolivia</option>
+							<option value="brasil">Brasil</option>
+							<option value="chile">Chile</option>
+							<option value="peru">Perú</option>
+							<option value="venezuela">Venezuela</option>
+							<option value="ecuador">Ecuador</option>
+						</select>
+						<div class="terminos">
+							<input type="checkbox" name="terminosYCondiciones" id="terminosYCondiciones" required>
+							<label for="terminosYCondiciones">Acepto términos y condiciones</label>
+						</div>
+						<button class="boton-registro" type="submit">Registrarse</button>
+					</form>
+
+						<a href="#">¿Necesitas ayuda?</a>
+				</div>
+				
+			</div>
+		</main>
+	</body>
+</html>
