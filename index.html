@@ -1,33 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-<<<<<<< HEAD
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Peliculas Codo</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<script
+			src="https://kit.fontawesome.com/79d92ce098.js"
+			crossorigin="anonymous"
+		></script>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Peliculas Codo</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-		rel="stylesheet" />
-	<link rel="stylesheet" href="style.css" />
-</head>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<header>
+			<a class="logo" href="#">
+				<i class="fa fa-solid fa-film fa-2x"></i>
+				<h1 class="logo-h2">CAC-Movies</h1>
+			</a>
 
-<body>
-	<header>
-		<div class="header_contenedor">
-			<!-- trabajar el header aca adentro asi le damos un max width para que sea responsive -->
-		</div>
-	</header>
+			<nav class="header-nav">
+				<ul>
+					<li class="nav-items"><a href="#">Tendencias</a></li>
+					<li class="nav-items">
+						<a href="../html/registro.html">Registrarse</a>
+					</li>
+					<li class="nav-items"><a href="#">Inicia Sesión</a></li>
+				</ul>
+			</nav>
+			<i id="menu-desplegable" class="fa fa-bars fa-lg"></i>
+		</header>
 
-	<main>
-		<section class="section_bienvenida">
+		<main>
+			<!-- Flecha para subir -->
+			<div class="volver-arriba-container">
+				<i
+					id="volver-arriba"
+					class="fa fa-solid fa-arrow-up fa-lg volver-arriba"
+				></i>
+			</div>
 
-		</section>
-		<hr>
-		<section class="mas_aclamadas">
-			<h3>Las m&aacute;s aclamadas</h3>
+			<section class="section_bienvenida">
+				<div class="section-container">
+					<h1>Peliculas y series ilimitadas en un solo lugar</h1>
+					<h3>
+						Disfruta donde quieras.<br />
+						Cancela en cualquier momento.
+					</h3>
+					<a class="boton-registro" href="#">Registrarse</a>
+				</div>
+			</section>
+
+			<section class="section_busqueda">
+				<h2>¿Qué quieres ver?</h2>
+				<div class="section-busqueda-container">
+					<input type="text" placeholder="Pelicula" />
+					<button class="section-busqueda-boton">Buscar</button>
+				</div>
+			</section>
+
+			<section class="section_tendencias"></section>
+
+			<section class="section_aclamadas">
+				<h3>Las m&aacute;s aclamadas</h3>
 			<div class="aclamadas">
 				<div class="peliculaItem">
 					<img class="imgAclamada" src="https://image.tmdb.org/t/p/w500//9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
@@ -111,8 +152,12 @@
 				</div>
 			</div>
 		</section>
-	</main>
-	<footer class="footer">
+			</section>
+		</main>
+
+		<footer>
+			
+				<footer class="footer">
 		<div class="terminos">
 			<a href="">T&eacuterminos y condiciones</a>
 			<a href="">Preguntas frecuentes</a>
@@ -123,83 +168,6 @@
 			<img src="./img/flecha-hacia-arriba.png" alt="ir hacia arriba">
 		</a>
 	</footer>
-</body>
-
-</html>
-=======
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Peliculas Codo</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
-		<script
-			src="https://kit.fontawesome.com/79d92ce098.js"
-			crossorigin="anonymous"
-		></script>
-
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-	</head>
-	<body>
-		<header>
-			<a class="logo" href="#">
-				<i class="fa fa-solid fa-film fa-2x"></i>
-				<h1 class="logo-h2">CAC-Movies</h1>
-			</a>
-
-			<nav class="header-nav">
-				<ul>
-					<li class="nav-items"><a href="#">Tendencias</a></li>
-					<li class="nav-items">
-						<a href="../html/registro.html">Registrarse</a>
-					</li>
-					<li class="nav-items"><a href="#">Inicia Sesión</a></li>
-				</ul>
-			</nav>
-			<i id="menu-desplegable" class="fa fa-bars fa-lg"></i>
-		</header>
-
-		<main>
-			<!-- Flecha para subir -->
-			<div class="volver-arriba-container">
-				<i
-					id="volver-arriba"
-					class="fa fa-solid fa-arrow-up fa-lg volver-arriba"
-				></i>
-			</div>
-
-			<section class="section_bienvenida">
-				<div class="section-container">
-					<h1>Peliculas y series ilimitadas en un solo lugar</h1>
-					<h3>
-						Disfruta donde quieras.<br />
-						Cancela en cualquier momento.
-					</h3>
-					<a class="boton-registro" href="#">Registrarse</a>
-				</div>
-			</section>
-
-			<section class="section_busqueda">
-				<h2>¿Qué quieres ver?</h2>
-				<div class="section-busqueda-container">
-					<input type="text" placeholder="Pelicula" />
-					<button class="section-busqueda-boton">Buscar</button>
-				</div>
-			</section>
-
-			<section class="section_tendencias"></section>
-
-			<section class="section_aclamadas"></section>
-		</main>
-
-		<footer>
-			<div class="footer">
-				<!-- trabajar el footer aca adentro asi le damos un max width para que sea responsive -->
 			</div>
 		</footer>
 	</body>
