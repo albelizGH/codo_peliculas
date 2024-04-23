@@ -48,6 +48,10 @@ body {
   background-color: var(--color_secundario);
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+}
+
 header {
   background-color: var(--color_principal);
   min-height: 5rem;
@@ -200,51 +204,157 @@ header {
 }
 
 
-@media screen and (max-width:768px) {
 
-  h1 {
-    font-size: 2.5rem;
-  }
+/* MAS ACLAMADAS */
 
-  h2 {
-    font-size: 1.8rem;
-  }
+hr {
+  border: 1px solid #9f3647;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
 
-  h3 {
-    font-size: 1.2rem;
-  }
+.aclamadas::-webkit-scrollbar {
+  height: 4px;
+}
 
-  header {
-    padding-inline: 30px;
-  }
-
-  .header-nav {
-    display: none;
-  }
-
-  #menu-desplegable {
-    display: inline-block;
-  }
-
-  .section-container a {
-    font-size: 1.5rem;
-  }
-
-  .boton-registro {
-    padding: 0.5rem 1rem;
-  }
-
+.aclamadas::-webkit-scrollbar-thumb {
+  background: #9f3647;
 }
 
 
-@media screen and (max-width:380px) {
-
-  .section_bienvenida {
-    min-height: 100svh;
-  }
-
-  .section_busqueda {
-    min-height: 100svh;
-  }
-
+.mas_aclamadas {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  transition-property: all;
+  transition-duration: 2s;
 }
+
+.aclamadas {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.peliculaItem {
+  border-radius: 25px;
+  width: 170px;
+  min-width: 170px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imgAclamada {
+  border-radius: 5%;
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--color_principal);
+  width: 0 auto;
+  min-height: 10vh;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-links a {
+  color: var(--color_texto);
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 0.5rem 1rem;
+}
+
+#terminos_admin {
+  background: black;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 5px 0;
+  }
+}
+
+  @media screen and (max-width:768px) {
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    header {
+      padding-inline: 30px;
+    }
+
+    .header-nav {
+      display: none;
+    }
+
+    #menu-desplegable {
+      display: inline-block;
+    }
+
+    .section-container a {
+      font-size: 1.5rem;
+    }
+
+    .boton-registro {
+      padding: 0.5rem 1rem;
+    }
+
+  }
+
+
+  @media screen and (max-width:380px) {
+
+    .section_bienvenida {
+      min-height: 100svh;
+    }
+
+    .section_busqueda {
+      min-height: 100svh;
+    }
+
+    .peliculaItem {
+      min-width: 120px;
+    }
+
+    .imgAclamada {
+      border-radius: 5%;
+      width: 95%;
+      height: 95%;
+      object-fit: cover;
+    }
+  }
