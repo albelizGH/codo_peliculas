@@ -60,9 +60,10 @@ header {
   align-items: center;
   padding: 15px 50px;
   position: sticky;
-  width: 100%;
-  top: 0;
+  width: 100vw;
+  top: 0px;
   font-weight: bold;
+  z-index: 1;
 }
 
 .logo {
