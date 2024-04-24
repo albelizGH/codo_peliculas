@@ -1,0 +1,85 @@
+:root{
+  --color_principal:#9f3647;
+  --color_secundario:#181419;
+  --color_texto:#ffff;
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  color:var(--color_texto);
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--color_secundario);
+  }  
+.section_tendencias{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.cont-all-movies{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.title-trends{
+  color: var(--color_texto);
+  font-size: 2rem;
+  text-align: center;
+}
+.div-cont-img-movie{
+  margin: 30px;
+}
+.size-movie{
+  width: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  transition: filter 0.8s ease;
+}
+.size-movie:hover{
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--color_principal);
+  transform: scale(0.92);
+  filter: blur(6px);
+}
+.cont-buttons-movies{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.button-back, .button-next{
+  background-color: var(--color_principal);
+  border: 1px solid var(--color_texto);
+  border-radius: 5px;
+  padding: 16px;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.5s;
+}
+.button-back:hover, .button-next:hover{
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow: 0 0 15px var(--color_texto);
+}
+
+
+
+
+
+
