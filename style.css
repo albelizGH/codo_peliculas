@@ -28,7 +28,7 @@ body{
 .cont-all-movies{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
   width: 100%;
