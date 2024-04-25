@@ -204,6 +204,76 @@ header {
   cursor: pointer;
 }
 
+/* TENTENCIAS */
+.section_tendencias {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cont-all-movies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.title-trends {
+  color: var(--color_texto);
+  text-align: center;
+}
+
+.div-cont-img-movie {
+  margin: 30px;
+}
+
+.size-movie {
+  width: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+  transition: filter 0.8s ease;
+}
+
+.size-movie:hover {
+  cursor: pointer;
+  box-shadow: 0 0 15px var(--color_principal);
+  transform: scale(0.92);
+  filter: blur(6px);
+}
+
+.cont-buttons-movies {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.button-back,
+.button-next {
+  background-color: var(--color_principal);
+  border: 1px solid var(--color_texto);
+  border-radius: 5px;
+  padding: 16px;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.3s, box-shadow 0.5s;
+}
+
+.button-back:hover,
+.button-next:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  box-shadow: 0 0 15px var(--color_texto);
+}
 
 
 /* MAS ACLAMADAS */
@@ -301,61 +371,69 @@ hr {
   }
 }
 
-  @media screen and (max-width:768px) {
+@media screen and (max-width:768px) {
 
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-    }
-
-    header {
-      padding-inline: 30px;
-    }
-
-    .header-nav {
-      display: none;
-    }
-
-    #menu-desplegable {
-      display: inline-block;
-    }
-
-    .section-container a {
-      font-size: 1.5rem;
-    }
-
-    .boton-registro {
-      padding: 0.5rem 1rem;
-    }
-
+  h1 {
+    font-size: 2.5rem;
   }
 
-
-  @media screen and (max-width:380px) {
-
-    .section_bienvenida {
-      min-height: 100svh;
-    }
-
-    .section_busqueda {
-      min-height: 100svh;
-    }
-
-    .peliculaItem {
-      min-width: 120px;
-    }
-
-    .imgAclamada {
-      border-radius: 5%;
-      width: 95%;
-      height: 95%;
-      object-fit: cover;
-    }
+  h2 {
+    font-size: 1.8rem;
   }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding-inline: 30px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  #menu-desplegable {
+    display: inline-block;
+  }
+
+  .section-container a {
+    font-size: 1.5rem;
+  }
+
+  .boton-registro {
+    padding: 0.5rem 1rem;
+  }
+
+  .div-cont-img-movie {
+    margin: 5px;
+  }
+
+  .size-movie{
+    width: 40vw;
+  }
+}
+
+
+@media screen and (max-width:380px) {
+
+  .section_bienvenida {
+    min-height: 100svh;
+  }
+
+  .section_busqueda {
+    min-height: 100svh;
+  }
+
+  .peliculaItem {
+    min-width: 120px;
+  }
+
+  .imgAclamada {
+    border-radius: 5%;
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+  }
+  
+}
