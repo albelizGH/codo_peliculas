@@ -33,6 +33,6 @@ Tambien podes:
 ## Imagenes:
 
 ![Captura de pantalla 2024-04-25 192256](https://github.com/albelizGH/codo_peliculas/assets/129092769/bfc40e65-03db-40bb-a1a0-99229bc62ec0)
-![Captura de pantalla 2024-04-25 192323](https://github.com/albelizGH/codo_peliculas/assets/129092769/33d12f5a-111d-4201-8a40-103f602d223e)
 ![Captura de pantalla 2024-04-25 192304](https://github.com/albelizGH/codo_peliculas/assets/129092769/0baaeb88-84aa-42d8-8abd-e011fde1d990)
+![Captura de pantalla 2024-04-25 192323](https://github.com/albelizGH/codo_peliculas/assets/129092769/33d12f5a-111d-4201-8a40-103f602d223e)
 ![Captura de pantalla 2024-04-25 192343](https://github.com/albelizGH/codo_peliculas/assets/129092769/eda412ed-450c-4aa0-abe1-69836cc39c4f)
