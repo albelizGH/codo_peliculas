@@ -143,6 +143,7 @@ select {
   margin-bottom: 1.3rem;
 }
 
+
 input::placeholder,
 select {
   font-size: 1.1rem;
@@ -158,6 +159,13 @@ select {
   color: #7b7474;
   font-size: 1.1rem;
 }
+
+#email:-webkit-autofill,
+#emailInput:-webkit-autofill:hover,
+#emailInput:-webkit-autofill:focus {
+background-color: var(--color_secundario);
+}    
+
 
 
 
