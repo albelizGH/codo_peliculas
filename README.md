@@ -32,7 +32,7 @@ Tambien podes:
 
 ## Imagenes:
 
-![Captura de pantalla 2024-04-25 192343](https://github.com/albelizGH/codo_peliculas/assets/129092769/087c6788-ab27-4d09-88db-81aa4d43c25d)
-![Captura de pantalla 2024-04-25 192323](https://github.com/albelizGH/codo_peliculas/assets/129092769/9850dc42-e54b-4245-80e5-b7a965b5e792)
-![Captura de pantalla 2024-04-25 192304](https://github.com/albelizGH/codo_peliculas/assets/129092769/6f338989-66af-4dd6-9320-8031cf4a024d)
-![Captura de pantalla 2024-04-25 192256](https://github.com/albelizGH/codo_peliculas/assets/129092769/2a6056c1-989f-4fc5-9263-e21f30d89bb7)
+![Captura de pantalla 2024-04-25 192256](https://github.com/albelizGH/codo_peliculas/assets/129092769/bfc40e65-03db-40bb-a1a0-99229bc62ec0)
+![Captura de pantalla 2024-04-25 192323](https://github.com/albelizGH/codo_peliculas/assets/129092769/33d12f5a-111d-4201-8a40-103f602d223e)
+![Captura de pantalla 2024-04-25 192304](https://github.com/albelizGH/codo_peliculas/assets/129092769/0baaeb88-84aa-42d8-8abd-e011fde1d990)
+![Captura de pantalla 2024-04-25 192343](https://github.com/albelizGH/codo_peliculas/assets/129092769/eda412ed-450c-4aa0-abe1-69836cc39c4f)
