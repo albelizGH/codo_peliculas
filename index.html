@@ -1,30 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="es">
 
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Peliculas Codo</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
 		rel="stylesheet" />
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="/style.css" />
+	<link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
 	<header>
-		<div class="header_contenedor">
-			<!-- trabajar el header aca adentro asi le damos un max width para que sea responsive -->
-		</div>
+		<a class="logo" href="#">
+			<i class="fa fa-solid fa-film fa-2x"></i>
+			<h1 class="logo-h2">CAC-Movies</h1>
+		</a>
+
+		<nav class="header-nav">
+			<ul>
+				<li class="nav-items"><a href="#">Tendencias</a></li>
+				<li class="nav-items">
+					<a href="../html/registro.html">Registrarse</a>
+				</li>
+				<li class="nav-items"><a href="./html/inicio-sesion.html">Inicia Sesión</a></li>
+			</ul>
+		</nav>
+		<i id="menu-desplegable" class="fa fa-bars fa-lg"></i>
 	</header>
 
 	<main>
-		<section class="section_bienvenida">
+		<section class="section_tendencias">
+			<h2 class="title-trends">Las tendencias de hoy</h2>
+			<section class="cont-all-movies">
+				<div class="div-cont-img-movie">
+					<img src="img/peli_1.jpg" alt="The Beekeeper" class="size-movie">
+					<div class="div-cont-img-movie">
+						<img src="img/peli_2.jpg" alt="Badland hunters" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_3.jpg" alt="The marvels" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_4.jpg" alt="Wonka" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_5.jpg" alt="Aquaman and the lost kingdom" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_6.jpg" alt="migration" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_7.jpg" alt="60 Minutes" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_8.jpg" alt="Wish" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_9.jpg" alt="The Masked Saint" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_10.jpg" alt="Due Justice" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_11.jpg" alt="Orion an the dark" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_12.jpg" alt="???" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_13.jpg" alt="Lift" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_14.jpg" alt="Attack" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_15.jpg" alt="Mutant Ghost" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_16.jpg" alt="Poor Things" class="size-movie">
+					</div>
+					<div class="div-cont-img-movie">
+						<img src="img/peli_17.jpg" alt="The 5" class="size-movie">
+					</div>
+			</section>
+			<section class="cont-buttons-movies">
+				<button class="button-back">Anterior</button>
+				<button class="button-next">Siguiente</button>
+			</section>
+		</section>
+
+		<section class="section_aclamadas">
 
 		</section>
-		<hr>
+		<hr />
+
 		<section class="mas_aclamadas">
 			<h3 class="titulo">Las m&aacute;s aclamadas</h3>
 			<div class="aclamadas">
