@@ -136,8 +136,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  text-wrap: balance;
-  ;
 }
 
 .boton-registro {
@@ -300,61 +298,61 @@ hr {
   }
 }
 
-  @media screen and (max-width:768px) {
+@media screen and (max-width:768px) {
 
-    h1 {
-      font-size: 2.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-    }
-
-    header {
-      padding-inline: 30px;
-    }
-
-    .header-nav {
-      display: none;
-    }
-
-    #menu-desplegable {
-      display: inline-block;
-    }
-
-    .section-container a {
-      font-size: 1.5rem;
-    }
-
-    .boton-registro {
-      padding: 0.5rem 1rem;
-    }
-
+  h1 {
+    font-size: 2.5rem;
   }
 
-
-  @media screen and (max-width:380px) {
-
-    .section_bienvenida {
-      min-height: 100svh;
-    }
-
-    .section_busqueda {
-      min-height: 100svh;
-    }
-
-    .peliculaItem {
-      min-width: 120px;
-    }
-
-    .imgAclamada {
-      border-radius: 5%;
-      width: 95%;
-      height: 95%;
-      object-fit: cover;
-    }
+  h2 {
+    font-size: 1.8rem;
   }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  header {
+    padding-inline: 30px;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  #menu-desplegable {
+    display: inline-block;
+  }
+
+  .section-container a {
+    font-size: 1.5rem;
+  }
+
+  .boton-registro {
+    padding: 0.5rem 1rem;
+  }
+
+}
+
+
+@media screen and (max-width:380px) {
+
+  .section_bienvenida {
+    min-height: 100svh;
+  }
+
+  .section_busqueda {
+    min-height: 100svh;
+  }
+
+  .peliculaItem {
+    min-width: 120px;
+  }
+
+  .imgAclamada {
+    border-radius: 5%;
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+  }
+}
