@@ -226,6 +226,10 @@
       width: 100%;
     }
 
+    header {
+      padding-inline: 30px;
+    }
+
   }
 
   @media screen and (max-width: 490px) {

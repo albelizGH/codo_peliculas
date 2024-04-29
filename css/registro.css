@@ -54,7 +54,7 @@ header {
   align-items: center;
   padding: 15px 50px;
   position: static;
-  width: 100%;
+  width: 100vw;
   top: 0;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -216,6 +216,9 @@ background-color: var(--color_secundario);
     width: 90vw;
   }
 
+  header {
+    padding-inline: 30px;
+  }
 }
 
 @media screen and (max-width: 376px) {
