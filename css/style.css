@@ -360,16 +360,7 @@ hr {
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 600px) {
-  .footer-links {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .footer-links a {
-    margin: 5px 0;
-  }
-}
 
 @media screen and (max-width:768px) {
 
@@ -411,6 +402,17 @@ hr {
 
   .size-movie{
     width: 40vw;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin: 5px 0;
   }
 }
 
