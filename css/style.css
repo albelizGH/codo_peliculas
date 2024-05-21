@@ -237,7 +237,7 @@ header {
 
 .size-movie {
 	width: 240px;
-	height: 365px;
+    aspect-ratio: 0.65;
 	border-radius: 10px;
 	object-fit: cover;
 	transition: transform 0.8s ease, filter 0.8s ease;
