@@ -93,11 +93,8 @@
   }
 
   .section_1 {
-        background: linear-gradient(to right top,
-        rgba(0, 0, 0, 0.54),
-        rgba(177, 176, 176, 0.742)) center center / cover, url(../img/mario-bg.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:contain;
     background-position: top;
     display: flex;
     justify-content: center;
@@ -140,7 +137,14 @@
 
   .infodirectores {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap:4rem;
+    row-gap: 2rem;
+  }
+
+  .infodirectores>div{
+    width: fit-content;
   }
 
   /* Seccion 2 */
@@ -239,6 +243,11 @@
     .section_1-contenido {
       width: 90vw;
     }
+
+    .infodirectores>div{
+        width: 40%;
+      }
+
 
     .section_2-contenido {
       width: 90%;
