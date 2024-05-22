@@ -71,13 +71,13 @@ async function dibujarAclamadas(){
 
 BOTON_SIGUIENTE.addEventListener('click',()=>{
     pagina++;
+    document.getElementById('tendencias').scrollIntoView({ behavior: 'smooth' });
     dibujarTendencias(pagina);
 })
 
 BOTON_ATRAS.addEventListener('click',()=>{
-    if(pagina!=1){
-        pagina--;
-    }
+    if(pagina!=1){pagina--;}
+    document.getElementById('tendencias').scrollIntoView({ behavior: 'smooth' });
     dibujarTendencias(pagina);
 })
 
