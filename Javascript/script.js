@@ -76,7 +76,8 @@ BOTON_SIGUIENTE.addEventListener('click',()=>{
 })
 
 BOTON_ATRAS.addEventListener('click',()=>{
-    if(pagina!=1){pagina--;}
+    if(pagina==1){return;}
+    pagina--;
     document.getElementById('tendencias').scrollIntoView({ behavior: 'smooth' });
     dibujarTendencias(pagina);
 })
