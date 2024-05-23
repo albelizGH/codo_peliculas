@@ -3,33 +3,44 @@ async function dibujarWeb(){
     const URL_BASE=`https://api.themoviedb.org/3/movie/`
     const LENGUAJE="?language=es-MX"
     const id=localStorage.getItem('id');
-
     //LLamada al endpoint detalles
 	let response =await fetch(`${URL_BASE}${id}${LENGUAJE}&api_key=${API_KEY}`);
 	let data = await response.json();
     let titulo=data.title;
     let imagenFondo="https://image.tmdb.org/t/p/original"+data.backdrop_path;
     let portada="https://image.tmdb.org/t/p/w300"+data.poster_path;
-    let resenia=data.overview.trim();
+    let resenia=data.overview;
+    //Si no esta la reseña en la parte español mexico la traigo desde español españa
+    if(resenia==""){
+        let response =await fetch(`${URL_BASE}${id}?language=es&api_key=${API_KEY}`);
+        let data = await response.json();
+        resenia=(data.overview.trim()=="")?"Información no disponible por el momento":data.overview.trim();
+    }
     let fechaLanzamiento=data.release_date;
     let generos=data.genres.map(genero=>" "+genero.name).join();
-    let horas = Math.floor(data.runtime / 60);
-    let minutosRestantes = data.runtime % 60;
-    let duracion = `${horas}h ${minutosRestantes} ${(minutosRestantes === 1) ? "minuto" : "minutos"}`;
+    let duracion;
+    if(data.runtime==0){
+        duracion=""
+    }else{
+        let horas = Math.floor(data.runtime / 60);
+        let minutosRestantes = data.runtime % 60;
+        duracion = `• ${horas}h ${minutosRestantes} ${(minutosRestantes === 1) ? "minuto" : "minutos"}`;
+    }
+    
 
 
     const section1=document.querySelector('.section_1');
     section1.innerHTML=`
 				<div class="section_1-contenido">
 					<div class="portada-pelicula">
-						<img src="${portada}" alt="imagen-pelicula" />
+						<img src="${portada}" alt="imagen-pelicula"/>
 					</div>
 
 					<div class="informacion">
 						<div class="tituloYClasificacion">
 							<h2>${titulo}.</h2>
 							<p>
-								${fechaLanzamiento} • ${generos} • ${duracion}
+								${fechaLanzamiento} • ${generos}  ${duracion}
 							</p>
 						</div>
 						<div class="descripcion">
@@ -57,10 +68,12 @@ section1.style.backgroundPosition = "top";
 /* Secction 2 */
 
 const keyYoutube=await buscarTrailer(id,API_KEY);
-let presupuesto=data.budget.toLocaleString('de-DE');
-let recaudacion=data.revenue.toLocaleString('de-DE');
+let presupuesto=(data.budget==0)?"No disponible":"$"+data.budget.toLocaleString('de-DE');
+let recaudacion=(data.revenue==0)?"No disponible":"$"+data.revenue.toLocaleString('de-DE');
 let estado=(data.status=="Released")?"Estrenada":"No estrenada";
-let puntuacion=Number(data.vote_average).toFixed(1);
+let puntuacion=(data.vote_average==0)?"No disponible":Number(data.vote_average).toFixed(1);
+let cantidadVotos=(data.vote_count==0)?"No disponible":data.vote_count;
+
 
 const section2=document.querySelector('.section_2');
 section2.innerHTML=`
@@ -93,12 +106,16 @@ section2.innerHTML=`
             <td>${puntuacion}</td>
         </tr>
         <tr>
+            <td>Cantidad de votos</td>
+            <td>${cantidadVotos}</td>
+        </tr>
+        <tr>
             <td>Costo</td>
-            <td>$${presupuesto}</td>
+            <td>${presupuesto}</td>
         </tr>
         <tr>
             <td>Recaudación</td>
-            <td>$${recaudacion}</td>
+            <td>${recaudacion}</td>
         </tr>
         <tr>
             <td>Estado</td>

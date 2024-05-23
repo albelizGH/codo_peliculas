@@ -15,18 +15,20 @@ async function dibujarTendencias(pagina) {
 	let response =await fetch(`https://api.themoviedb.org/3/movie/now_playing?language=es&page=${pagina}&api_key=${API_KEY}`);
 	let data = await response.json();
 	let resultados = data.results;
-	let estructuraHtml=resultados.map(pelicula=>{return`
-    <div class="div-cont-img-movie" data-id="${pelicula.id}">
-        <a href="./html/pelicula-informacion.html" target="_blank">
-        <img
-            src=${URL_IMAGEN_BASICA}${pelicula.poster_path}
-            alt="${pelicula.title}"
-            class="size-movie"
-        /></a>
-        <div class="movie-title">${pelicula.title}</div>
-    </div>`
-    }
-    )
+    console.log(resultados)
+	let estructuraHtml=resultados
+                .map(pelicula=>{return`
+                <div class="div-cont-img-movie" data-id="${pelicula.id}">
+                    <a href="./html/pelicula-informacion.html" target="_blank">
+                    <img
+                        src=${URL_IMAGEN_BASICA}${pelicula.poster_path}
+                        alt="${pelicula.title}"
+                        class="size-movie"
+                    /></a>
+                    <div class="movie-title">${pelicula.title}</div>
+                </div>`
+                }
+                );
     CONTENEDOR_PRINCIPAL.innerHTML=`${estructuraHtml.join("")}`;
 
      // Asignar evento después de renderizar las películas
@@ -84,6 +86,7 @@ BOTON_ATRAS.addEventListener('click',()=>{
 
 LOGO.addEventListener('click',()=>{
     dibujarTendencias(1);
+    
 });
 
 

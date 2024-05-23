@@ -312,7 +312,7 @@ hr {
 }
 
 .aclamadas::-webkit-scrollbar {
-	height: 4px;
+	height: 0.8rem;
 }
 
 .aclamadas::-webkit-scrollbar-thumb {
@@ -325,8 +325,13 @@ hr {
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 60px;
+    margin: 2rem auto;
 	transition-property: all;
 	transition-duration: 2s;
+}
+
+.mas_aclamadas h2{
+    margin-bottom: 2rem;
 }
 
 .aclamadas {
