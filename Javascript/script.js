@@ -39,6 +39,7 @@ async function dibujarTendencias(pagina) {
              localStorage.setItem("id", id);
          });
      });
+
 }
 
 async function dibujarAclamadas(){

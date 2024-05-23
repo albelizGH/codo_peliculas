@@ -35,7 +35,6 @@ async function dibujarWeb(){
 					<div class="portada-pelicula">
 						<img src="${portada}" alt="imagen-pelicula"/>
 					</div>
-
 					<div class="informacion">
 						<div class="tituloYClasificacion">
 							<h2>${titulo}.</h2>
