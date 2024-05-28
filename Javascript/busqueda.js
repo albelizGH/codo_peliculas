@@ -106,6 +106,7 @@ LOGO.addEventListener('click',()=>{
 
 document.querySelector('.section-busqueda-boton').addEventListener('click',()=>{
     busqueda=BUSCADOR.value;
+    localStorage.setItem("busquedaInicial",BUSCADOR.value);
     buscar(1)
 })
 
