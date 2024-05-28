@@ -91,7 +91,7 @@
 
 .menu-desplegable {
 	width: 100vw;
-	height: 100svh;
+	height: 100dvh;
 	position: fixed;
 	z-index: 1;
 	background-color: var(--color_principal);

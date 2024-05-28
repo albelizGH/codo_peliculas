@@ -39,6 +39,13 @@ a {
 	font-family: "Nunito", sans-serif;
 }
 
+hr {
+	border: 1px solid var(--color_principal);
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
 body {
 	font-family: "Nunito", sans-serif;
 	font-weight: 400;
@@ -185,7 +192,7 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 50svh;
+	min-height: 25svh;
 	text-align: center;
 	width: 80%;
 	margin-inline: auto;
@@ -235,7 +242,7 @@ header {
 	flex-direction: column;
 	gap: 40px;
 	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 2rem;
 }
 
 .cont-all-movies {
@@ -247,7 +254,6 @@ header {
 	width: 100%;
 	margin-bottom: 10px;
 }
-
 
 .title-trends {
 	color: var(--color_texto);
@@ -328,65 +334,7 @@ header {
 	box-shadow: 0 0 15px var(--color_texto);
 }
 
-
-/* MAS ACLAMADAS */
-
-hr {
-	border: 1px solid var(--color_principal);
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 40px;
-}
-
-.aclamadas::-webkit-scrollbar {
-	height: 0.8rem;
-}
-
-.aclamadas::-webkit-scrollbar-thumb {
-	background: var(--color_principal);
-}
-
-.mas_aclamadas {
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 60px;
-    margin: 2rem auto;
-	transition-property: all;
-	transition-duration: 2s;
-}
-
-.mas_aclamadas h2{
-    margin-bottom: 2rem;
-}
-
-.aclamadas ,.semanales {
-	overflow-x: scroll;
-	overflow-y: hidden;
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: flex-start;
-}
-
-.peliculaItem {
-	border-radius: 25px;
-	width: 170px;
-	min-width: 170px;
-	font-size: 20px;
-	cursor: pointer;
-	margin-left: 30px;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.imgAclamada {
-	border-radius: 5%;
-	width: 95%;
-	height: 95%;
-	object-fit: cover;
-}
+/* Footer */
 
 .footer {
 	display: flex;

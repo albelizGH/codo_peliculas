@@ -10,7 +10,7 @@
 			href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&dbisplay=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="../css/busqueda.css" />
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<script
 			src="https://kit.fontawesome.com/79d92ce098.js"
@@ -21,31 +21,31 @@
         <div class="menu-desplegable">
             <nav class="header-nav-m">
 				<ul class="nav-items-padre">
-					<li class="nav-items-m"><a href="#tendencias">Tendencias</a></li>
+					<li class="nav-items-m"><a href="../index.html#tendencias">Tendencias</a></li>
                     <li class="nav-items-m">
-						<a href="./html/registro.html">Registrarse</a>
+						<a href="./registro.html">Registrarse</a>
 					</li>
 					<li class="nav-items-m">
-						<a href="./html/inicio-sesion.html">Inicia Sesión</a>
+						<a href="./inicio-sesion.html">Inicia Sesión</a>
 					</li>
 				</ul>
 			</nav>
         </div>
 		<header>
-			<a class="logo" href="#">
-				<i class="fa-solid fa-film fa-2x"></i>
+			<a class="logo" href="../index.html">
+				<i class="fa fa-solid fa-film fa-2x"></i>
 				<h1 class="logo-h2">CAC-Movies</h1>
 			</a>
 
 			<nav class="header-nav">
 				<ul>
-					<li class="nav-items"><a href="#tendencias">Tendencias</a></li>
 					<li class="nav-items">
-						<a href="./html/registro.html">Registrarse</a>
+						<a href="../index.html#tendencias">Tendencias</a>
 					</li>
 					<li class="nav-items">
-						<a href="./html/inicio-sesion.html">Inicia Sesión</a>
+						<a href="../html/registro.html">Registrarse</a>
 					</li>
+					<li class="nav-items"><a href="#">Inicia Sesión</a></li>
 				</ul>
 			</nav>
 			<i id="menu-desplegable" class="fa fa-bars fa-lg"></i>
@@ -63,21 +63,6 @@
 				</a>
 			</div>
 
-			<section class="section_bienvenida">
-				<div class="section-container">
-					<h1>Peliculas y series ilimitadas en un solo lugar</h1>
-					<h3>
-						Disfruta donde quieras.<br />
-						Cancela en cualquier momento.
-					</h3>
-					<a
-						class="boton-registro"
-						href="./html/registro.html"
-						>Registrarse</a
-					>
-				</div>
-			</section>
-
 			<section class="section_busqueda">
 				<h2>¿Qué quieres ver?</h2>
 				<div class="section-busqueda-container">
@@ -88,7 +73,7 @@
 
 			<section id="tendencias" class="section_tendencias">
 				<hr />
-				<h2 class="title-trends">Tendencias</h2>
+				<h2 class="title-trends">Resultados</h2>
 				<section class="cont-all-movies">
                     <!-- Generadas con JS -->
 				</section>
@@ -98,14 +83,6 @@
 				</section>
 			</section>
 
-			<section class="section_aclamadas"></section>
-			<hr />
-			<section class="mas_aclamadas">
-				<h2>Aclamadas</h2>
-				<div class="aclamadas">
-                    <!-- Generadas con JS -->
-				</div>
-			</section>
 		</main>
 
 		<footer class="footer">
@@ -118,7 +95,7 @@
 				</div>
 			</div>
 		</footer>
-        <script src="./Javascript/script.js"></script>
-        <script src="./Javascript/menu-desplegable.js"></script>
+        <script src="../Javascript/menu-desplegable.js"></script>
+        <script src="../Javascript/busqueda.js"></script>
 	</body>
 </html>

@@ -18,6 +18,7 @@ async function dibujarWeb(){
         resenia=(data.overview.trim()=="")?"Información no disponible por el momento":data.overview.trim();
     }
     let fechaLanzamiento=data.release_date;
+    fechaLanzamiento= acomodarFecha(fechaLanzamiento);
     let generos=data.genres.map(genero=>" "+genero.name).join();
     let duracion;
     if(data.runtime==0){
@@ -94,10 +95,10 @@ section2.innerHTML=`
     <h3>Información</h3>
     
     <div class="redes">
-        <a target="_blank" href="https://www.facebook.com/supermariomovie"><i class="fa-brands fa-facebook fa-2x"></i></a>
-        <a target="_blank" href="https://twitter.com/supermariomovie"><i class="fa-brands fa-twitter fa-2x"></i></a>
-        <a target="_blank" href="https://www.instagram.com/supermariomovie/"><i class="fa-brands fa-instagram fa-2x"></i></a>
-        <a target="_blank" href="https://www.uphe.com/movies/the-super-mario-bros-movie"><i class="fa-solid fa-link fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fa-solid fa-link fa-2x"></i></a>
     </div>
 
     <table>
@@ -223,6 +224,12 @@ async function dibujarDirectorEscritor(id,LENGUAJE,API_KEY) {
         });
 
         return arrayHTML.join("");
+    }
+
+    function acomodarFecha(fecha){
+        let fechaArray=fecha.split("-");
+        let fechaNueva=fechaArray[2]+"-"+fechaArray[1]+"-"+fechaArray[0];
+        return fechaNueva;
     }
 
 dibujarWeb()
