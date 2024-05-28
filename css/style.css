@@ -103,15 +103,11 @@ header {
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
-	z-index: 1000;
+	z-index: 1;
 	background-color: var(--color_principal);
     display: none;
     justify-content: center;
     align-items: center;
-}
-
-.nav-items-padre{
-    padding-bottom: 80px;
 }
 
 .nav-items-m {
@@ -211,6 +207,9 @@ header {
 	padding-inline: 1rem;
 	font-size: 1rem;
 	color: black;
+    border: none;
+	outline: none;
+	box-shadow: none;
 }
 
 .section-busqueda-container input:focus {

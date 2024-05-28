@@ -45,9 +45,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 50px;
-    position: static;
+    position: sticky;
     top: 0;
     font-weight: bold;
+    z-index: 10;
     
   }
 
@@ -85,8 +86,31 @@
 
 
   #menu-desplegable {
+	display: none;
+}
+
+.menu-desplegable {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 1;
+	background-color: var(--color_principal);
     display: none;
-  }
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items-m {
+	padding: 1rem 1rem;
+	font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.nav-items-m:last-child {
+	background-color: black;
+}
 
   /* -->MAIN<--- */
   main {

@@ -3,6 +3,7 @@ async function dibujarWeb(){
     const URL_BASE=`https://api.themoviedb.org/3/movie/`
     const LENGUAJE="?language=es-MX"
     const id=localStorage.getItem('id');
+
     //LLamada al endpoint detalles
 	let response =await fetch(`${URL_BASE}${id}${LENGUAJE}&api_key=${API_KEY}`);
 	let data = await response.json();

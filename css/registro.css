@@ -53,11 +53,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  position: static;
-  width: 100vw;
+  position: sticky;
   top: 0;
   font-weight: bold;
   margin-bottom: 1rem;
+  z-index: 10;
 }
 
 .logo {
@@ -94,7 +94,30 @@ header {
 
 
 #menu-desplegable {
-  display: none;
+	display: none;
+}
+
+.menu-desplegable {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 1;
+	background-color: var(--color_principal);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items-m {
+	padding: 1rem 1rem;
+	font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.nav-items-m:last-child {
+	background-color: black;
 }
 
 main {
@@ -237,7 +260,7 @@ background-color: var(--color_secundario);
 
 
   .header-nav {
-    display: none;
+    display:none;
   }
 
   #menu-desplegable {

@@ -4,7 +4,6 @@ let pagina=1;
 const BOTON_SIGUIENTE=document.querySelector('.button-next');
 const BOTON_ATRAS=document.querySelector('.button-back');
 const LOGO=document.querySelector('.logo');
-const MENU_DESPLEGABLE = document.getElementById("menu-desplegable");
 
 
 function dibujarWeb(pagina) {
@@ -21,7 +20,7 @@ async function dibujarTendencias(pagina) {
 	let estructuraHtml=resultados
                 .map(pelicula=>{return`
                 <div class="div-cont-img-movie" data-id="${pelicula.id}">
-                    <a href="./html/pelicula-informacion.html" target="_blank">
+                    <a href="./html/pelicula-informacion.html">
                     <img
                         src=${URL_IMAGEN_BASICA}${pelicula.poster_path}
                         alt="${pelicula.title}"
@@ -92,20 +91,6 @@ LOGO.addEventListener('click',()=>{
     
 });
 
-MENU_DESPLEGABLE.addEventListener("click", () => {
-	const menu = document.querySelector(".menu-desplegable");
-	if (menu.style.display == "none") {
-		menu.style.display = "flex";
-	} else {
-		menu.style.display = "none";
-	}
-});
-
-const itemsMenuDesplegable = document.querySelectorAll(".nav-items-m");
-itemsMenuDesplegable.forEach(elemento=>elemento.addEventListener("click", () => {
-	const menu = document.querySelector(".menu-desplegable");
-	menu.style.display = "none";
-}));
 
 
 dibujarWeb(1);
