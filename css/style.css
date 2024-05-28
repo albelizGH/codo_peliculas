@@ -99,6 +99,33 @@ header {
 	display: none;
 }
 
+.menu-desplegable {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: 1000;
+	background-color: var(--color_principal);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-items-padre{
+    padding-bottom: 80px;
+}
+
+.nav-items-m {
+	padding: 1rem 1rem;
+	font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.nav-items-m:last-child {
+	background-color: black;
+}
+
 .volver-arriba-container {
 	position: fixed;
 	right: 1.5rem;

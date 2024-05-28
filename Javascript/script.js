@@ -4,6 +4,8 @@ let pagina=1;
 const BOTON_SIGUIENTE=document.querySelector('.button-next');
 const BOTON_ATRAS=document.querySelector('.button-back');
 const LOGO=document.querySelector('.logo');
+const MENU_DESPLEGABLE = document.getElementById("menu-desplegable");
+
 
 function dibujarWeb(pagina) {
 	dibujarTendencias(pagina);
@@ -89,6 +91,21 @@ LOGO.addEventListener('click',()=>{
     dibujarTendencias(1);
     
 });
+
+MENU_DESPLEGABLE.addEventListener("click", () => {
+	const menu = document.querySelector(".menu-desplegable");
+	if (menu.style.display == "none") {
+		menu.style.display = "flex";
+	} else {
+		menu.style.display = "none";
+	}
+});
+
+const itemsMenuDesplegable = document.querySelectorAll(".nav-items-m");
+itemsMenuDesplegable.forEach(elemento=>elemento.addEventListener("click", () => {
+	const menu = document.querySelector(".menu-desplegable");
+	menu.style.display = "none";
+}));
 
 
 dibujarWeb(1);
