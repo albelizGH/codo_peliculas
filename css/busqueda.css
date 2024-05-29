@@ -192,22 +192,31 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 25svh;
+	min-height: 50svh;
 	text-align: center;
 	width: 80%;
 	margin-inline: auto;
 	gap: 2rem;
 }
 
+
+
 .section-busqueda-container {
 	display: flex;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between	;
+}
+
+.buscador{
+    background-color: white;
+    border:3px solid white;
+	border-radius: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .section-busqueda-container input {
-	width: 50vw;
+	width: 30vw;
 	min-width: 200px;
 	height: 50px;
 	border-radius: 30px;
@@ -234,6 +243,7 @@ header {
 	font-size: 1rem;
 	cursor: pointer;
 }
+
 
 /* TENTENCIAS */
 .section_tendencias {

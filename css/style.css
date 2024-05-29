@@ -192,15 +192,24 @@ header {
 	gap: 2rem;
 }
 
+
+
 .section-busqueda-container {
 	display: flex;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-between	;
+}
+
+.buscador{
+    background-color: white;
+    border:3px solid white;
+	border-radius: 30px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .section-busqueda-container input {
-	width: 50vw;
+	width: 30vw;
 	min-width: 200px;
 	height: 50px;
 	border-radius: 30px;
@@ -233,7 +242,6 @@ header {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	gap: 40px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
@@ -252,6 +260,7 @@ header {
 .title-trends {
 	color: var(--color_texto);
 	text-align: center;
+    margin-top: 20px;
 }
 
 .div-cont-img-movie {
@@ -352,13 +361,13 @@ hr {
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 60px;
-    margin: 2rem auto;
+    margin: 1rem auto;
 	transition-property: all;
 	transition-duration: 2s;
 }
 
 .mas_aclamadas h2{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .aclamadas ,.semanales {
@@ -478,6 +487,22 @@ hr {
 	.section_busqueda {
 		min-height: 100svh;
 	}
+
+    .buscador{
+        width: 90vw;
+    }
+    
+    .section-busqueda-container input {
+        min-width: 30px;
+        height: 50px;
+        border-radius: 30px;
+        padding-inline: 1rem;
+        font-size: 1rem;
+        color: black;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
 
 	.peliculaItem {
 		min-width: 120px;
