@@ -2,6 +2,9 @@
     --color_principal: #9f3647;
 	--color_secundario: #181419;
 	--color_texto: #ffff;
+    --600:#0D1217;
+    --700:#090D10;
+    --800:#070A0D;
 }
 
 /*ver si dejar tamaño de texto relativo o absoluto */
@@ -11,6 +14,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	color: var(--color_texto);
+    scroll-behavior: smooth;
 }
 
 button {
@@ -43,7 +47,7 @@ body {
 	font-family: "Nunito", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	background-color: var(--color_secundario);
+	background-color: var(--600);
 }
 
 body::-webkit-scrollbar {
@@ -51,7 +55,7 @@ body::-webkit-scrollbar {
 }
 
 header {
-	background-color: var(--color_principal);
+	background-color: var(--600);
 	min-height: 5rem;
 	display: flex;
 	justify-content: space-between;
@@ -88,7 +92,7 @@ header {
 }
 
 .nav-items:last-child {
-	background-color: black;
+	background-color: var(--color_principal);
 }
 
 .nav-items:last-child:hover {
@@ -104,7 +108,7 @@ header {
 	height: 100dvh;
 	position: fixed;
 	z-index: 1;
-	background-color: var(--color_principal);
+	background-color: var(--600);
     display: none;
     justify-content: center;
     align-items: center;
@@ -119,7 +123,7 @@ header {
 }
 
 .nav-items-m:last-child {
-	background-color: black;
+	background-color: var(--color_principal);
 }
 
 .volver-arriba-container {
@@ -134,6 +138,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+    z-index: 100;
 }
 
 .section_bienvenida {
@@ -185,11 +190,11 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 50svh;
 	text-align: center;
 	width: 80%;
-	margin-inline: auto;
+	margin:4rem auto;
 	gap: 2rem;
+    margin-top: 6rem;
 }
 
 
@@ -242,8 +247,12 @@ header {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	margin-top: 10px;
-	margin-bottom: 10px;
+}
+
+.titulo-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .cont-all-movies {
@@ -252,15 +261,14 @@ header {
 	justify-content: center;
 	gap: 10px;
 	flex-wrap: wrap;
-	width: 100%;
-	margin-bottom: 10px;
+	width: 90%;
 }
 
 
 .title-trends {
 	color: var(--color_texto);
 	text-align: center;
-    margin-top: 20px;
+    font-size: 2rem;
 }
 
 .div-cont-img-movie {
@@ -316,15 +324,15 @@ header {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	gap: 50px;
+	gap: 1rem;
 }
 
 .button-back,
 .button-next {
 	background-color: var(--color_principal);
 	border-radius: 5px;
-	padding: 16px;
-	width: 100px;
+    padding: 0.8rem 0rem;
+	width: 130px;
 	font-size: 1rem;
 	font-weight: 500;
 	transition: transform 0.3s, box-shadow 0.5s;
@@ -340,11 +348,8 @@ header {
 
 /* MAS ACLAMADAS */
 
-hr {
-	border: 1px solid var(--color_principal);
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 40px;
+.section_aclamadas{
+    margin-top: 3rem;
 }
 
 .aclamadas::-webkit-scrollbar {
@@ -355,31 +360,29 @@ hr {
 	background: var(--color_principal);
 }
 
+
 .mas_aclamadas {
-	width: 80%;
+	width: 85%;
 	margin: 0 auto;
 	text-align: center;
-	margin-top: 10px;
+	margin-top:60px;
 	margin-bottom: 60px;
     margin: 1rem auto;
 	transition-property: all;
 	transition-duration: 2s;
 }
 
-.mas_aclamadas h2{
-    margin-bottom: 1rem;
-}
-
 .aclamadas ,.semanales {
 	overflow-x: scroll;
 	overflow-y: hidden;
 	width: 100%;
+    margin-top: 1rem;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
 }
 
-.peliculaItem {
+.peliculaItem{
 	border-radius: 25px;
 	width: 170px;
 	min-width: 170px;
@@ -388,6 +391,10 @@ hr {
 	margin-left: 30px;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.peliculaItem:first-child{
+    margin-left: 0;
 }
 
 .imgAclamada {
@@ -402,7 +409,7 @@ hr {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	background-color: var(--color_principal);
+	background-color: var(--700);
 	width: 0 auto;
 	min-height: 10vh;
 }
@@ -422,11 +429,15 @@ hr {
 }
 
 #terminos_admin {
-	background: black;
 	border-radius: 5px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
+
+    .title-trends{
+        font-size: 1.5rem;
+    }
+
 	h1 {
 		font-size: 2.5rem;
 	}
@@ -464,7 +475,7 @@ hr {
 	}
 
 	.size-movie {
-		width: 40vw;
+		width: 20vw;
 	}
 }
 
@@ -479,13 +490,13 @@ hr {
 	}
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
 	.section_bienvenida {
 		min-height: 100svh;
 	}
 
 	.section_busqueda {
-		min-height: 100svh;
+		min-height: 20svh;
 	}
 
     .buscador{
@@ -513,5 +524,9 @@ hr {
 		width: 95%;
 		height: 95%;
 		object-fit: cover;
+	}
+
+    .size-movie {
+		width: 40vw;
 	}
 }

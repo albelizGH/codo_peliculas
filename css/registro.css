@@ -2,6 +2,12 @@
   --color_principal: #9f3647;
   --color_secundario: #2a2a2a;
   --color_texto: #ffff;
+  --300: #527194;
+  --400: #314459;
+  --500: #10161D;
+  --600:#0D1217;
+  --700:#090D10;
+  --800:#070A0D;
 }
 
 * {
@@ -51,8 +57,19 @@ body {
   min-height: 100svh;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.854);
+    z-index: -1; 
+}
+
 header {
-  background-color: var(--color_principal);
+  background-color: var(--600);
   height: 5rem;
   display: flex;
   justify-content: space-between;
@@ -89,7 +106,7 @@ header {
 }
 
 .nav-items:last-child {
-  background-color: black;
+  background-color: var(--color_principal);
 }
 
 
@@ -107,7 +124,7 @@ header {
 	height: 100dvh;
 	position: fixed;
 	z-index: 1;
-	background-color: var(--color_principal);
+	background-color: var(--600);
     display: none;
     justify-content: center;
     align-items: center;
@@ -122,7 +139,7 @@ header {
 }
 
 .nav-items-m:last-child {
-	background-color: black;
+	background-color: var(--color_principal);
 }
 
 main {
@@ -136,7 +153,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--color_secundario);
+  background-color: var(--500);
   border-radius: 10px;
   width: 30vw;
   padding: 4rem 0;
@@ -164,7 +181,7 @@ select {
   border-radius: 20px;
   padding: 10px;
   width: 100%;
-  background-color: var(--color_secundario);
+  background-color: var(--500);
   border: 1px solid var(--color_principal);
   margin-bottom: 1.3rem;
 }
@@ -172,18 +189,18 @@ select {
 
 input::placeholder,
 select {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: #7b7474;
 }
 
 select {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   color: #7b7474;
 }
 
 #fecha {
   color: #7b7474;
-  font-size: 1.1rem;
+  font-size: 0.8rem;
 }
 
 #email:-webkit-autofill,
@@ -224,6 +241,7 @@ background-color: var(--color_secundario);
 
 .ayuda {
   color: #ffffff7f;
+  font-size: 0.85rem;
 }
 
 
@@ -232,7 +250,7 @@ background-color: var(--color_secundario);
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: var(--color_principal);
+  background-color: var(--700);
   width: 0 auto;
   min-height: 10vh;
   margin-top: 1rem;
@@ -250,11 +268,6 @@ background-color: var(--color_secundario);
   text-decoration: none;
   margin: 0 15px;
   padding: 0.5rem 1rem;
-}
-
-#terminos_admin {
-  background: black;
-  border-radius: 5px;
 }
 
 

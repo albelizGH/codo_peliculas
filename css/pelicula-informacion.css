@@ -2,6 +2,12 @@
     --color_principal: #9f3647;
     --color_secundario: #2a2a2a;
     --color_texto: #ffff;
+    --300: #527194;
+    --400: #314459;
+    --500: #10161D;
+    --600:#0D1217;
+    --700:#090D10;
+    --800:#070A0D;
   }
 
   * {
@@ -35,11 +41,11 @@
     font-family: "Nunito", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: var(--color_secundario);
+    background-color: var(--600);
     }
 
   header {
-    background-color: var(--color_principal);
+    background-color: var(--600);
     height: 5rem;
     display: flex;
     justify-content: space-between;
@@ -76,7 +82,7 @@
   }
 
   .nav-items:last-child {
-    background-color: black;
+    background-color: var(--color_principal);
   }
 
 
@@ -94,7 +100,7 @@
 	height: 100dvh;
 	position: fixed;
 	z-index: 1;
-	background-color: var(--color_principal);
+	background-color: var(--600);
     display: none;
     justify-content: center;
     align-items: center;
@@ -109,7 +115,7 @@
 }
 
 .nav-items-m:last-child {
-	background-color: black;
+	background-color: var(--color_principal);
 }
 
   /* -->MAIN<--- */
@@ -235,7 +241,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: var(--color_principal);
+  background-color: var(--700);
   width: 0 auto;
   min-height: 10vh;
 }
@@ -253,13 +259,6 @@
   margin: 0 15px;
   padding: 0.5rem 1rem;
 }
-
-#terminos_admin {
-  background: black;
-  border-radius: 5px;
-}
-
-
 
 
   @media screen and (max-width:768px) {

@@ -2,6 +2,9 @@
     --color_principal: #9f3647;
 	--color_secundario: #181419;
 	--color_texto: #ffff;
+    --600:#0D1217;
+    --700:#090D10;
+    --800:#070A0D;
 }
 
 /*ver si dejar tamaño de texto relativo o absoluto */
@@ -39,18 +42,12 @@ a {
 	font-family: "Nunito", sans-serif;
 }
 
-hr {
-	border: 1px solid var(--color_principal);
-	width: 80%;
-	margin: 0 auto;
-	margin-top: 40px;
-}
 
 body {
 	font-family: "Nunito", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	background-color: var(--color_secundario);
+	background-color: var(--600);
 }
 
 body::-webkit-scrollbar {
@@ -58,7 +55,7 @@ body::-webkit-scrollbar {
 }
 
 header {
-	background-color: var(--color_principal);
+	background-color: var(--600);
 	min-height: 5rem;
 	display: flex;
 	justify-content: space-between;
@@ -95,7 +92,7 @@ header {
 }
 
 .nav-items:last-child {
-	background-color: black;
+	background-color: var(--color_principal);
 }
 
 .nav-items:last-child:hover {
@@ -111,7 +108,7 @@ header {
 	height: 100dvh;
 	position: fixed;
 	z-index: 1;
-	background-color: var(--color_principal);
+	background-color: var(--600);
     display: none;
     justify-content: center;
     align-items: center;
@@ -126,7 +123,7 @@ header {
 }
 
 .nav-items-m:last-child {
-	background-color: black;
+	background-color: var(--color_principal);
 }
 
 .volver-arriba-container {
@@ -192,14 +189,12 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	min-height: 50svh;
 	text-align: center;
 	width: 80%;
-	margin-inline: auto;
+	margin:4rem auto;
 	gap: 2rem;
+    margin-top: 6rem;
 }
-
-
 
 .section-busqueda-container {
 	display: flex;
@@ -250,9 +245,11 @@ header {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	gap: 40px;
-	margin-top: 10px;
-	margin-bottom: 2rem;
+}
+
+.titulo-div{
+    display: flex;
+    width: 85%;
 }
 
 .cont-all-movies {
@@ -261,13 +258,14 @@ header {
 	justify-content: center;
 	gap: 10px;
 	flex-wrap: wrap;
-	width: 100%;
-	margin-bottom: 10px;
+	width: 90%;
 }
+
 
 .title-trends {
 	color: var(--color_texto);
 	text-align: center;
+    font-size: 2rem;
 }
 
 .div-cont-img-movie {
@@ -310,10 +308,6 @@ header {
     font-size: 1.5rem;
 }
 
-#informacion{
-
-}
-
 .div-cont-img-movie:hover .movie-title {
 	opacity: 1;
 }
@@ -323,15 +317,15 @@ header {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	gap: 50px;
+	gap: 1rem;
 }
 
 .button-back,
 .button-next {
 	background-color: var(--color_principal);
 	border-radius: 5px;
-	padding: 16px;
-	width: 100px;
+    padding: 0.8rem 0rem;
+	width: 130px;
 	font-size: 1rem;
 	font-weight: 500;
 	transition: transform 0.3s, box-shadow 0.5s;
@@ -351,9 +345,10 @@ header {
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	background-color: var(--color_principal);
+	background-color: var(--700);
 	width: 0 auto;
 	min-height: 10vh;
+    margin-top:3rem;
 }
 
 .footer-links {
@@ -369,13 +364,12 @@ header {
 	margin: 0 15px;
 	padding: 0.5rem 1rem;
 }
+@media screen and (max-width: 900px) {
 
-#terminos_admin {
-	background: black;
-	border-radius: 5px;
-}
+    .title-trends{
+        font-size: 1.5rem;
+    }
 
-@media screen and (max-width: 768px) {
 	h1 {
 		font-size: 2.5rem;
 	}
@@ -413,7 +407,7 @@ header {
 	}
 
 	.size-movie {
-		width: 40vw;
+		width: 20vw;
 	}
 }
 
@@ -428,14 +422,30 @@ header {
 	}
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 450px) {
 	.section_bienvenida {
 		min-height: 100svh;
 	}
 
 	.section_busqueda {
-		min-height: 100svh;
+		min-height: 20svh;
 	}
+
+    .buscador{
+        width: 90vw;
+    }
+    
+    .section-busqueda-container input {
+        min-width: 30px;
+        height: 50px;
+        border-radius: 30px;
+        padding-inline: 1rem;
+        font-size: 1rem;
+        color: black;
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
 
 	.peliculaItem {
 		min-width: 120px;
@@ -447,4 +457,9 @@ header {
 		height: 95%;
 		object-fit: cover;
 	}
+
+    .size-movie {
+		width: 40vw;
+	}
 }
+
