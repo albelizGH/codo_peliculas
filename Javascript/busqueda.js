@@ -22,8 +22,9 @@ async function dibujarBusqueda(pagina) {
         return;
     }
     //Restablezco los estilos
+    BOTON_SIGUIENTE.style.display = 'block';
+    BOTON_ATRAS.style.display = 'block';
     document.querySelector('.titulo-div').style.marginBottom='';
-    document.querySelector('.cont-buttons-movies').style.display='none';
 
     resultados.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     console.log(resultados)
@@ -65,13 +66,13 @@ async function buscar(pagina) {
         BOTON_SIGUIENTE.style.display = 'none';
         BOTON_ATRAS.style.display = 'none';
         document.querySelector('.titulo-div').style.marginBottom='4rem';
-        document.querySelector('.titulo-div').style.marginBottom='4rem';
         CONTENEDOR_PRINCIPAL.innerHTML = `<div class="titulo-div"><p>No se encontraron resultados para "${busqueda}"</p></div>`;
         return;
     }
      // Restablecer estilos desaparecidos anteriormente
-    document.querySelector('.titulo-div').style.marginBottom = '';
-    document.querySelector('.cont-buttons-movies').style.display = 'flex';
+     BOTON_SIGUIENTE.style.display = 'block';
+     BOTON_ATRAS.style.display = 'block';
+     document.querySelector('.titulo-div').style.marginBottom='';
 
     resultados.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     console.log(resultados)
