@@ -2,6 +2,7 @@
     --color_principal: #9f3647;
     --color_secundario: #2a2a2a;
     --color_texto: #ffff;
+    --color_texto_secundario:#c9c0bb;
     --300: #527194;
     --400: #314459;
     --500: #10161D;
@@ -55,7 +56,6 @@
     top: 0;
     font-weight: bold;
     z-index: 10;
-    
   }
 
   .logo {
@@ -173,6 +173,10 @@
     row-gap: 2rem;
   }
 
+  .infodirectores p{
+    color:rgb(239, 232, 232);
+  }
+
   .infodirectores>div{
     width: fit-content;
   }
@@ -223,7 +227,6 @@
     justify-content: space-between;
   }
 
-
   table{
     border-collapse: separate;
     border-spacing: 1rem 1rem;
@@ -234,6 +237,76 @@
     font-weight: bold;
     padding-right: 1.5rem;
   }
+
+  
+.actores::-webkit-scrollbar {
+	height: 0.8rem;
+}
+
+.actores::-webkit-scrollbar-thumb {
+	background: var(--color_principal);
+}
+
+.actores_principales {
+	width: 85%;
+	margin: 0 auto;
+	text-align: center;
+	margin-top:60px;
+	margin-bottom: 60px;
+    margin: 1rem auto;
+	transition-property: all;
+	transition-duration: 2s;
+}
+
+.actores ,.semanales {
+	overflow-x: scroll;
+	overflow-y: hidden;
+	width: 100%;
+    margin-top: 1rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.actorItem{
+	border-radius: 25px;
+	width: 130px;
+	min-width: 130px;
+	font-size: 20px;
+	cursor: pointer;
+	margin-left: 30px;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.actorItem:first-child{
+    margin-left: 0;
+}
+
+.imgActor {
+	border-radius: 5%;
+	width: 95%;
+	height: 95%;
+	object-fit: cover;
+}
+
+.actor_info{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    padding-left: 5px;
+}
+
+.actor_personaje{
+    font-size: 0.8rem;
+    display: block;
+}
+
+.actor_nombre{
+    font-size: 0.8rem;
+    display: block;
+    color:rgb(201, 187, 187);
+}
 
   
 .footer {
@@ -259,7 +332,6 @@
   margin: 0 15px;
   padding: 0.5rem 1rem;
 }
-
 
   @media screen and (max-width:768px) {
 
