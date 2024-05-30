@@ -15,7 +15,8 @@ async function dibujarBusqueda(pagina) {
     cantidadPaginasEncontradas=data.total_pages;
 	let resultados = data.results;
     if (resultados.length === 0) {
-        document.querySelector('.cont-buttons-movies').style.display='none';
+        BOTON_SIGUIENTE.style.display = 'none';
+        BOTON_ATRAS.style.display = 'none';
         document.querySelector('.titulo-div').style.marginBottom='4rem';
         CONTENEDOR_PRINCIPAL.innerHTML = `<div class="titulo-div"><p>No se encontraron resultados para "${busquedaInicio}"</p></div>`;
         return;
@@ -61,7 +62,9 @@ async function buscar(pagina) {
 	let data = await response.json();
 	let resultados = data.results;
     if (resultados.length === 0) {
-        document.querySelector('.cont-buttons-movies').style.display='none';
+        BOTON_SIGUIENTE.style.display = 'none';
+        BOTON_ATRAS.style.display = 'none';
+        document.querySelector('.titulo-div').style.marginBottom='4rem';
         document.querySelector('.titulo-div').style.marginBottom='4rem';
         CONTENEDOR_PRINCIPAL.innerHTML = `<div class="titulo-div"><p>No se encontraron resultados para "${busqueda}"</p></div>`;
         return;
