@@ -374,6 +374,7 @@ header {
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-start;
+    padding-bottom: 0.5rem;
 }
 
 .peliculaItem {
