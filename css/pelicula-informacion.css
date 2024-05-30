@@ -232,7 +232,7 @@ table tr td:first-child {
 }
 
 .actores::-webkit-scrollbar {
-	height: 0.8rem;
+	height: 0.6rem;
 }
 
 .actores::-webkit-scrollbar-thumb {
