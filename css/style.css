@@ -65,7 +65,7 @@ header {
 	width: 100vw;
 	top: 0px;
 	font-weight: bold;
-	z-index: 1;
+	z-index: 1000;
 }
 
 .logo {
@@ -93,6 +93,7 @@ header {
 
 .nav-items:last-child {
 	background-color: var(--color_principal);
+    transition: transform 0.3s;
 }
 
 .nav-items:last-child:hover {
@@ -107,7 +108,7 @@ header {
 	width: 100vw;
 	height: 100dvh;
 	position: fixed;
-	z-index: 1;
+	z-index: 100;
 	background-color: var(--600);
     display: none;
     justify-content: center;
@@ -138,7 +139,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
-    z-index: 100;
+    z-index: 10;
 }
 
 .section_bienvenida {
@@ -290,9 +291,10 @@ header {
 .size-movie:hover {
 	cursor: pointer;
 	box-shadow: 0 0 15px var(--color_principal);
-	transform: scale(0.92);
-	filter: blur(6px);
-}
+	transform: scale(1.05);
+    filter: brightness(30%);
+/* 	filter: blur(4px);
+ */}
 
 .movie-title {
 	position: absolute;
@@ -335,14 +337,13 @@ header {
 	width: 130px;
 	font-size: 1rem;
 	font-weight: 500;
-	transition: transform 0.3s, box-shadow 0.5s;
+	transition: transform 0.3s;
 }
 
 .button-back:hover,
 .button-next:hover {
 	cursor: pointer;
-	transform: scale(0.9);
-	box-shadow: 0 0 15px var(--color_texto);
+	transform: scale(1.02);
 }
 
 

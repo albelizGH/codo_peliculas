@@ -5,17 +5,25 @@ const BOTON_ATRAS=document.querySelector('.button-back');
 const LOGO=document.querySelector('.logo');
 const BUSCADOR=document.getElementById("buscador");
 let busquedaInicio=localStorage.getItem("busquedaInicial")
+let cantidadPaginasEncontradas;
 
 async function dibujarBusqueda(pagina) {
     const CONTENEDOR_PRINCIPAL=document.querySelector('.cont-all-movies');
     const URL_IMAGEN_BASICA="https://image.tmdb.org/t/p/w300";
 	let response =await fetch(`https://api.themoviedb.org/3/search/movie?query=${busquedaInicio}&language=es-mx&page=${pagina}&api_key=${API_KEY}`);
 	let data = await response.json();
+    cantidadPaginasEncontradas=data.total_pages;
 	let resultados = data.results;
     if (resultados.length === 0) {
-        CONTENEDOR_PRINCIPAL.innerHTML = `<p>No se encontraron resultados para "${busquedaInicio}"</p>`;
+        document.querySelector('.cont-buttons-movies').style.display='none';
+        document.querySelector('.titulo-div').style.marginBottom='4rem';
+        CONTENEDOR_PRINCIPAL.innerHTML = `<div class="titulo-div"><p>No se encontraron resultados para "${busquedaInicio}"</p></div>`;
         return;
     }
+    //Restablezco los estilos
+    document.querySelector('.titulo-div').style.marginBottom='';
+    document.querySelector('.cont-buttons-movies').style.display='none';
+
     resultados.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     console.log(resultados)
 	let estructuraHtml=resultados
@@ -53,9 +61,15 @@ async function buscar(pagina) {
 	let data = await response.json();
 	let resultados = data.results;
     if (resultados.length === 0) {
-        CONTENEDOR_PRINCIPAL.innerHTML = `<p>No se encontraron resultados para "${busquedaInicio}"</p>`;
+        document.querySelector('.cont-buttons-movies').style.display='none';
+        document.querySelector('.titulo-div').style.marginBottom='4rem';
+        CONTENEDOR_PRINCIPAL.innerHTML = `<div class="titulo-div"><p>No se encontraron resultados para "${busqueda}"</p></div>`;
         return;
     }
+     // Restablecer estilos desaparecidos anteriormente
+    document.querySelector('.titulo-div').style.marginBottom = '';
+    document.querySelector('.cont-buttons-movies').style.display = 'flex';
+
     resultados.sort((a, b) => new Date(b.release_date) - new Date(a.release_date));
     console.log(resultados)
 	let estructuraHtml=resultados
@@ -86,6 +100,9 @@ async function buscar(pagina) {
 }
 
 BOTON_SIGUIENTE.addEventListener('click',()=>{
+    if(cantidadPaginasEncontradas==pagina){
+        return;
+    }
     pagina++;
     document.getElementById('tendencias').scrollIntoView({ behavior: 'smooth' });
     dibujarBusqueda(pagina);
@@ -109,5 +126,6 @@ document.querySelector('.section-busqueda-boton').addEventListener('click',()=>{
     localStorage.setItem("busquedaInicial",BUSCADOR.value);
     buscar(1)
 })
+
 
 dibujarBusqueda(1);
