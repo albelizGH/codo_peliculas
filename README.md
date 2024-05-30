@@ -1,7 +1,7 @@
 # Maqueta de Página Web de Películas
 
 ¡Bienvenido a AB-Movies, una web de películas!
-
+![Captura de pantalla 2024-05-30 134743](https://github.com/albelizGH/codo_peliculas/assets/129092769/e6eba4a1-bad1-4139-8c17-52e452a9ff33)
 ## Características planificadas:
 
 - **Interfaz de usuario intuitiva:** Presenta una interfaz visualmente atractiva y fácil de entender, diseñada para ofrecer una experiencia de usuario fluida.
@@ -14,8 +14,4 @@
 ## ¿Cómo ver la web?
 Miralo aca:
 https://albelizgh.github.io/codo_peliculas/
-
-¡Gracias por tu interés en nuestro proyecto! Estamos emocionados de compartir más actualizaciones a medida que avancemos en el desarrollo.
-
-## Imagenes:
 
