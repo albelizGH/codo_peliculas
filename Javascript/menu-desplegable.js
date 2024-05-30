@@ -10,7 +10,9 @@ MENU_DESPLEGABLE.addEventListener("click", () => {
 });
 
 const itemsMenuDesplegable = document.querySelectorAll(".nav-items-m");
-itemsMenuDesplegable.forEach(elemento=>elemento.addEventListener("click", () => {
-	const menu = document.querySelector(".menu-desplegable");
-	menu.style.display = "none";
-}));
+itemsMenuDesplegable.forEach((elemento) =>
+	elemento.addEventListener("click", () => {
+		const menu = document.querySelector(".menu-desplegable");
+		menu.style.display = "none";
+	})
+);

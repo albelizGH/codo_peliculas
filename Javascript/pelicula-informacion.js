@@ -265,11 +265,12 @@ async function dibujarActoresDirectoresEscritores(id, LENGUAJE, API_KEY) {
 	const nombreGuardados = new Set();
 
 	let actoresCast = data.cast;
+	console.log(actoresCast);
 	//Primero vemos si el array tiene 15 elementos, si no los tiene dibujo todos, si tiene mas de 15 solo dibujo 15
 	if (actoresCast.length < 15) {
 		for (let i = 0; i < actoresCast.length; i++) {
 			if (
-				!nombresRegistrados.has(actoresCast[i].name) &&
+				!nombreGuardados.has(actoresCast[i].name) &&
 				actoresCast[i].profile_path != null
 			) {
 				actores.push({

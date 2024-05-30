@@ -1,10 +1,10 @@
 :root {
-    --color_principal: #9f3647;
+	--color_principal: #9f3647;
 	--color_secundario: #181419;
 	--color_texto: #ffff;
-    --600:#0D1217;
-    --700:#090D10;
-    --800:#070A0D;
+	--600: #0d1217;
+	--700: #090d10;
+	--800: #070a0d;
 }
 
 /*ver si dejar tamaño de texto relativo o absoluto */
@@ -42,16 +42,15 @@ a {
 	font-family: "Nunito", sans-serif;
 }
 
-
 body {
 	font-family: "Nunito", sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	background-color: var(--600);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
@@ -112,17 +111,17 @@ header {
 	position: fixed;
 	z-index: 1;
 	background-color: var(--600);
-    display: none;
-    justify-content: center;
-    align-items: center;
+	display: none;
+	justify-content: center;
+	align-items: center;
 }
 
 .nav-items-m {
 	padding: 1rem 1rem;
 	font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
 }
 
 .nav-items-m:last-child {
@@ -143,12 +142,12 @@ header {
 	cursor: pointer;
 }
 
-main{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    /* min-height: 80vh; */
-    flex-grow: 1;
+main {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: space-between; */
+	/* min-height: 80vh; */
+	flex-grow: 1;
 }
 
 .section_busqueda {
@@ -159,27 +158,27 @@ main{
 	align-items: center;
 	text-align: center;
 	width: 80%;
-	margin:4rem auto;
+	margin: 4rem auto;
 	gap: 2rem;
-    margin-top: 6rem;
+	margin-top: 6rem;
 }
 
 .section-busqueda-container {
 	display: flex;
-	justify-content: space-between	;
+	justify-content: space-between;
 }
 
-.buscador{
-    background-color: white;
-    border:3px solid white;
+.buscador {
+	background-color: white;
+	border: 3px solid white;
 	border-radius: 30px;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
+	padding: 0;
+	display: flex;
+	justify-content: space-between;
 }
 
-.buscador:focus{
-    background-color: white;
+.buscador:focus {
+	background-color: white;
 }
 
 .section-busqueda-container input {
@@ -190,7 +189,7 @@ main{
 	padding-inline: 1rem;
 	font-size: 1rem;
 	color: black;
-    border: none;
+	border: none;
 	outline: none;
 	box-shadow: none;
 }
@@ -211,7 +210,6 @@ main{
 	cursor: pointer;
 }
 
-
 /* TENTENCIAS */
 .section_tendencias {
 	display: flex;
@@ -219,9 +217,9 @@ main{
 	flex-direction: column;
 }
 
-.titulo-div{
-    display: flex;
-    width: 85%;
+.titulo-div {
+	display: flex;
+	width: 85%;
 }
 
 .cont-all-movies {
@@ -233,11 +231,10 @@ main{
 	width: 90%;
 }
 
-
 .title-trends {
 	color: var(--color_texto);
 	text-align: center;
-    font-size: 2rem;
+	font-size: 2rem;
 }
 
 .div-cont-img-movie {
@@ -250,7 +247,7 @@ main{
 
 .size-movie {
 	width: 240px;
-    aspect-ratio: 0.65;
+	aspect-ratio: 0.65;
 	border-radius: 10px;
 	object-fit: cover;
 	transition: transform 0.8s ease, filter 0.8s ease;
@@ -259,13 +256,13 @@ main{
 .size-movie:hover {
 	cursor: pointer;
 	box-shadow: 0 0 15px var(--color_principal);
-    transform: scale(1.05);
-    filter: brightness(30%);
+	transform: scale(1.05);
+	filter: brightness(30%);
 }
 
 .movie-title {
 	position: absolute;
-    border-radius: 10px;
+	border-radius: 10px;
 	transform: scale(0.92);
 	transition: transform 0.8s ease, filter 0.8s ease;
 	transform: translateY(50%);
@@ -276,8 +273,8 @@ main{
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.3s;
-    font-weight: bold;
-    font-size: 1.5rem;
+	font-weight: bold;
+	font-size: 1.5rem;
 }
 
 .div-cont-img-movie:hover .movie-title {
@@ -296,12 +293,12 @@ main{
 .button-next {
 	background-color: var(--color_principal);
 	border-radius: 5px;
-    padding: 0.8rem 0rem;
+	padding: 0.8rem 0rem;
 	width: 130px;
 	font-size: 1rem;
 	font-weight: 500;
 	transition: transform 0.3s;
-    display: none;
+	display: none;
 }
 
 .button-back:hover,
@@ -320,7 +317,7 @@ main{
 	background-color: var(--700);
 	width: 0 auto;
 	min-height: 10vh;
-    margin-top:3rem;
+	margin-top: 3rem;
 }
 
 .footer-links {
@@ -337,10 +334,9 @@ main{
 	padding: 0.5rem 1rem;
 }
 @media screen and (max-width: 900px) {
-
-    .title-trends{
-        font-size: 1.5rem;
-    }
+	.title-trends {
+		font-size: 1.5rem;
+	}
 
 	h1 {
 		font-size: 2.5rem;
@@ -403,21 +399,21 @@ main{
 		min-height: 20svh;
 	}
 
-    .buscador{
-        width: 90vw;
-    }
-    
-    .section-busqueda-container input {
-        min-width: 30px;
-        height: 50px;
-        border-radius: 30px;
-        padding-inline: 1rem;
-        font-size: 1rem;
-        color: black;
-        border: none;
-        outline: none;
-        box-shadow: none;
-    }
+	.buscador {
+		width: 90vw;
+	}
+
+	.section-busqueda-container input {
+		min-width: 30px;
+		height: 50px;
+		border-radius: 30px;
+		padding-inline: 1rem;
+		font-size: 1rem;
+		color: black;
+		border: none;
+		outline: none;
+		box-shadow: none;
+	}
 
 	.peliculaItem {
 		min-width: 120px;
@@ -430,8 +426,7 @@ main{
 		object-fit: cover;
 	}
 
-    .size-movie {
+	.size-movie {
 		width: 40vw;
 	}
 }
-
