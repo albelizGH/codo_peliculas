@@ -177,9 +177,13 @@ main {
 	justify-content: space-between;
 }
 
-.buscador:focus {
-	background-color: white;
+.section-busqueda-container input:focus {
+    outline: none;
+    background-color: initial;
+    border: initial;
+    box-shadow: none;
 }
+
 
 .section-busqueda-container input {
 	width: 30vw;

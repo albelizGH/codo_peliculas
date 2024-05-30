@@ -226,9 +226,12 @@ header {
 }
 
 .section-busqueda-container input:focus {
-	outline: none;
-	/* Evita que aparezca el contorno de enfoque */
+    outline: none;
+    background-color: initial;
+    border: initial;
+    box-shadow: none;
 }
+
 
 .section-busqueda-boton {
 	min-width: 100px;
