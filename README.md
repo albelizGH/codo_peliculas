@@ -9,8 +9,7 @@
 - **Estructura de navegación clara:** Se ha diseñado una estructura de navegación simple para permitir a los usuarios explorar y acceder fácilmente a diferentes secciones de la aplicación.
 - **Presentación de películas:** Se muestran tarjetas de películas con información básica, como el título, el póster y el año de lanzamiento, para dar una idea de cómo se presentará el contenido en la versión final.
 - **Presentación de películas:** Se muestra información detallada de las peliculas, como el titulo,poster,fechas,recaudaciones,actores,trailer,etc.
-- **Maquetación de páginas clave:** Se han creado páginas importantes, como la página de inicio, la página de detalles de la película y la página de búsqueda, para visualizar la disposición y el contenido.
-
+- **Simulacion de inicio de sesión:** La aplicación simula el inicio de sesión mediante un proceso de registro en el que se almacenan el correo electrónico y la contraseña en el local storage del navegador. Esto permite a los usuarios iniciar sesión utilizando las credenciales previamente registradas.
 ## ¿Cómo ver la web?
 Miralo aca:
 https://albelizgh.github.io/codo_peliculas/
