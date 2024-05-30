@@ -2,14 +2,14 @@ const CLAVE_API = "4fdf950cfe85e6288de8a6fdec330711";
 const URL_BASE = `https://api.themoviedb.org/3/movie/`;
 const LENGUAJE_ES_MX = "?language=es-MX";
 const LENGUAJE_ES = "?language=es";
-
+//Pasando el lenguaje y el id de la pelicula me retorna el objeto json para luego trabajarlo
 async function obtenerDatosPelicula(id, lenguaje) {
 	const respuesta = await fetch(
 		`${URL_BASE}${id}${lenguaje}&api_key=${CLAVE_API}`
 	);
 	return respuesta.json();
 }
-
+//Pasando el objeto json y el id de la pelicula me retorna la reseña, intenta en es-mx y si no esta hace otro fetch para buscarla en es-es
 async function obtenerResena(datos, id) {
 	let resena = datos.overview;
 	if (resena.trim() === "") {
@@ -21,40 +21,39 @@ async function obtenerResena(datos, id) {
 	}
 	return resena;
 }
-
+//Formatear la fecha que obtengo desde la api a como yo quiero
 function formatearFecha(fecha) {
 	let [anio, mes, dia] = fecha.split("-");
 	return `${dia}-${mes}-${anio}`;
 }
-
+//Formateo la duracion pasandola al formato que quiero
 function obtenerDuracion(duracion) {
 	if (duracion === 0) return "";
 	let horas = Math.floor(duracion / 60);
 	let minutos = duracion % 60;
 	return `• ${horas}h ${minutos} ${minutos === 1 ? "minuto" : "minutos"}`;
 }
-
+//Busca la clave de youtube para obtener luego el trailer quedandome con el primer resultado.
 async function buscarTrailer(id) {
-	const obtenerClaveYoutube = async (lenguaje) => {
-		const respuesta = await fetch(
-			`${URL_BASE}${id}/videos?language=${lenguaje}&api_key=${CLAVE_API}`
-		);
-		const datos = await respuesta.json();
-		return (
-			datos.results.find(
-				(video) =>
-					video.type === "Trailer" &&
-					!video.name.includes("Subtitulado")
-			)?.key || ""
-		);
-	};
+    const obtenerClaveYoutube = async (lenguaje) => {
+        const respuesta = await fetch(
+            `${URL_BASE}${id}/videos?language=${lenguaje}&api_key=${CLAVE_API}`
+        );
+        const datos = await respuesta.json();
+        const video = datos.results.find((video) => video.type === "Trailer" && !video.name.includes("Subtitulado"));//Obtengo el primer resultado
+        return video ? video.key : "";//Si no tengo video entonces devuelvo ""
+    };
 
-	let claveYoutube = await obtenerClaveYoutube("es-MX");
-	if (!claveYoutube) claveYoutube = await obtenerClaveYoutube("es");
-	if (!claveYoutube) claveYoutube = await obtenerClaveYoutube("en-US");
-	return claveYoutube;
+    let claveYoutube = await obtenerClaveYoutube("es-MX");
+    if (!claveYoutube) {
+        claveYoutube = await obtenerClaveYoutube("es");
+    }
+    if (!claveYoutube) {
+        claveYoutube = await obtenerClaveYoutube("en-US");
+    }
+    return claveYoutube;
 }
-
+//Coloco el fondo correspondiente a la pelicula
 function establecerFondo(seccion, imagenFondo) {
 	const gradiente =
 		"linear-gradient(to right top, rgba(0, 0, 0, 0.54), rgba(177, 176, 176, 0.742))";
@@ -63,7 +62,7 @@ function establecerFondo(seccion, imagenFondo) {
 	seccion.style.backgroundSize = "cover";
 	seccion.style.backgroundPosition = "top";
 }
-
+//Dibujo la seccion 1 que contiene la portada y la review con algunos datos
 async function dibujarSeccion1(datos, portada, imagenFondo, resena) {
 	const seccion1 = document.querySelector(".section_1");
 	const fechaLanzamiento = formatearFecha(datos.release_date);
@@ -89,7 +88,7 @@ async function dibujarSeccion1(datos, portada, imagenFondo, resena) {
         </div>`;
 	establecerFondo(seccion1, imagenFondo);
 }
-
+//Dibujo la seccion 2 que tiene el trailer e informacion
 async function dibujarSeccion2(datos, claveYoutube) {
 	const seccion2 = document.querySelector(".section_2");
 	const presupuesto =
@@ -131,7 +130,7 @@ async function dibujarSeccion2(datos, claveYoutube) {
             </div>
         </div>`;
 }
-
+//Dibujo toda la pagina, tomando el id que se guarda en el local al cliquear sobre alguna pelicula
 async function dibujarWeb() {
 	const id = localStorage.getItem("id");
 	const datos = await obtenerDatosPelicula(id, LENGUAJE_ES_MX);
@@ -148,7 +147,7 @@ async function dibujarWeb() {
 
 	dibujarActoresDirectoresEscritores(id, LENGUAJE_ES_MX, CLAVE_API);
 }
-
+//LLamo a la api para pedir informacion del cast y la dibujo
 async function dibujarActoresDirectoresEscritores(id, lenguaje, claveApi) {
 	const respuesta = await fetch(
 		`${URL_BASE}${id}/credits${lenguaje}&api_key=${claveApi}`
