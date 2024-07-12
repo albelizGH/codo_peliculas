@@ -65,44 +65,39 @@
 							name="nombre"
 							id="nombre"
 							placeholder="Nombre"
-							required
 						/>
 						<input
 							type="text"
 							name="apellido"
 							id="apellido"
 							placeholder="Apellido"
-							required
 						/>
 						<input
 							type="email"
 							name="email"
 							id="email"
 							placeholder="Email"
-							required
 						/>
 						<input
 							type="password"
 							name="contrasenia"
 							id="password"
 							placeholder="Contraseña"
-							required
 						/>
 						<input
 							type="date"
-							name="fecha"
+							name="fechaNacimiento"
 							id="fecha"
 							placeholder="dd/mm/aaaa"
-							required
 						/>
 						<select name="pais" id="pais" required>
-							<option value="argentina">Argentina</option>
-							<option value="bolivia">Bolivia</option>
-							<option value="brasil">Brasil</option>
-							<option value="chile">Chile</option>
-							<option value="peru">Perú</option>
-							<option value="venezuela">Venezuela</option>
-							<option value="ecuador">Ecuador</option>
+							<option value="Argentina">Argentina</option>
+							<option value="Bolivia">Bolivia</option>
+							<option value="Brasil">Brasil</option>
+							<option value="Chile">Chile</option>
+							<option value="Peru">Perú</option>
+							<option value="Venezuela">Venezuela</option>
+							<option value="Ecuador">Ecuador</option>
 						</select>
 						<div class="terminos">
 							<input
@@ -115,7 +110,7 @@
 								>Acepto términos y condiciones</label
 							>
 						</div>
-						<button class="boton-registro" type="submit">
+						<button class="boton-registro" type="submit" id="boton-registro">
 							Registrarse
 						</button>
 					</form>
@@ -135,5 +130,6 @@
 		</footer>
 		<script src="../Javascript/validacionCorreo.js"></script>
 		<script src="../Javascript/menu-desplegable.js"></script>
+        <script src="../Javascript/registro.js"></script>
 	</body>
 </html>
