@@ -192,7 +192,7 @@ function dibujarUpdate() {
 	tablaPadre.appendChild(div);
 }
 
-function actualizarDatos() {
+async function actualizarDatos() {
 	const id = document.getElementById("miID").textContent.trim(); // Obtener el contenido del ID
 	const nombre = document.getElementById("nombre").value.trim() || null;
 	const apellido = document.getElementById("apellido").value.trim() || null;
@@ -220,8 +220,6 @@ function actualizarDatos() {
 		pais: pais,
 	};
 
-	console.log(json);
-
 	fetch(urlUpdateUser, {
 		method: "PUT", // Cambiado de POST a PUT
 		headers: {
@@ -231,7 +229,8 @@ function actualizarDatos() {
 	})
 		.then((response) => {
 			if (response.ok) {
-				obtenerMisDatos(); // Actualizar los datos mostrados después de la actualización
+				obtenerMisDatos();
+                dibujarWeb();
 			} else {
 				throw new Error("Error al actualizar datos");
 			}
@@ -239,8 +238,6 @@ function actualizarDatos() {
 		.catch((error) => {
 			console.error("Error:", error);
 		});
-
-	dibujarWeb();
 }
 
 function cerrarSesion() {
@@ -274,7 +271,7 @@ async function dibujarWeb() {
 				alert("Vuelva a iniciar sesión");
 				cerrarSesion();
 			} else {
-				location.reload();
+				dibujarWeb();
 			}
 		});
 	}
