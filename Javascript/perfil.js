@@ -72,7 +72,7 @@ async function deleteUser(id) {
 function dibujarTabla(datos) {
 	const tablaPadre = document.querySelector(".tablaUsers");
 	let datosBodyTabla = "";
-	for (let i = 0; i < datos.length; i++) {
+	for (let i = 1; i < datos.length; i++) {
 		datosBodyTabla += `<tr>
         <th scope="row">${datos[i].id}</th>
         <td>${datos[i].nombre}</td>
